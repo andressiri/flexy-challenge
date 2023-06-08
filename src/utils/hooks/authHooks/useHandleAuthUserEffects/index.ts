@@ -3,8 +3,13 @@ import { useNavigate } from "react-router-dom";
 import { AuthUser, SetAuthUser, Remember } from "../../../../typings/contexts";
 import { IAuthUser } from "../../../../typings/users";
 import { handleNumberOfTabs } from "../../../helpers";
-import { DASHBOARD_ROUTE, LOGIN_ROUTE } from "src/config/constants";
-import { AUTH_USER, REMEMBER_USER, TOKEN } from "src/config/constants";
+import {
+  AUTH_USER,
+  REMEMBER_USER,
+  TOKEN,
+  DASHBOARD_ROUTE,
+  LOGIN_ROUTE,
+} from "../../../../config/constants";
 
 const useHandleAuthUserEffects = (
   authUser: AuthUser,

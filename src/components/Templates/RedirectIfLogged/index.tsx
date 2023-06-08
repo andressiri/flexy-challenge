@@ -1,7 +1,7 @@
 import { useContext } from "react";
-import { UsersContext } from "src/contexts";
+import { UsersContext } from "../../../contexts";
 import { Navigate, Outlet } from "react-router-dom";
-import { DASHBOARD_ROUTE } from "src/config/constants";
+import { DASHBOARD_ROUTE } from "../../../config/constants";
 
 function RedirectIfLogged() {
   const { authUser } = useContext(UsersContext);

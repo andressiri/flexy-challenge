@@ -1,6 +1,6 @@
 import React from "react";
 import { AuthUser, IUsersContext } from "../../../typings/contexts";
-import { AUTH_USER, REMEMBER_USER } from "src/config/constants";
+import { AUTH_USER, REMEMBER_USER } from "../../../config/constants";
 
 interface ReturnObj {
   usersContext: IUsersContext;
