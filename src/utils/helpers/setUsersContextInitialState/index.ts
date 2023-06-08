@@ -1,5 +1,6 @@
 import React from "react";
 import { AuthUser, IUsersContext } from "../../../typings/contexts";
+import { AUTH_USER, REMEMBER_USER } from "src/config/constants";
 
 interface ReturnObj {
   usersContext: IUsersContext;
@@ -7,8 +8,8 @@ interface ReturnObj {
 }
 
 const setUsersContextInitialState = (): ReturnObj => {
-  const localStorageUser = localStorage.getItem("authUser");
-  const localStorageRemember = localStorage.getItem("rememberUser");
+  const localStorageUser = localStorage.getItem(AUTH_USER);
+  const localStorageRemember = localStorage.getItem(REMEMBER_USER);
 
   const userRemembered = Boolean(localStorageRemember);
 

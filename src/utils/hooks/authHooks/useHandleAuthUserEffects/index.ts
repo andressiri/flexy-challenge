@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { AuthUser, SetAuthUser, Remember } from "../../../../typings/contexts";
 import { IAuthUser } from "../../../../typings/users";
 import { handleNumberOfTabs } from "../../../helpers";
+import { DASHBOARD_ROUTE, LOGIN_ROUTE } from "src/config/constants";
+import { AUTH_USER, REMEMBER_USER, TOKEN } from "src/config/constants";
 
 const useHandleAuthUserEffects = (
   authUser: AuthUser,
@@ -13,24 +15,24 @@ const useHandleAuthUserEffects = (
   const navigate = useNavigate();
 
   const clearUser = useCallback(() => {
-    localStorage.removeItem("authUser");
-    localStorage.removeItem("token");
-    localStorage.removeItem("rememberUser");
+    localStorage.removeItem(AUTH_USER);
+    localStorage.removeItem(TOKEN);
+    localStorage.removeItem(REMEMBER_USER);
   }, []);
 
   const handleMultipleTabs = useCallback(
     (e: StorageEvent) => {
-      if (e.key !== "authUser") return;
+      if (e.key !== AUTH_USER) return;
 
       if (!e.newValue) {
         clearUser();
         setAuthUser({});
-        navigate("/login");
+        navigate(`/${LOGIN_ROUTE}`);
         return;
       }
 
       setAuthUser(JSON.parse(e.newValue));
-      navigate("/dashboard");
+      navigate(`/${DASHBOARD_ROUTE}`);
     },
     [setAuthUser, clearUser, navigate]
   );
@@ -67,10 +69,10 @@ const useHandleAuthUserEffects = (
     const token = (authUser as IAuthUser)?.token;
 
     if (token) {
-      localStorage.setItem("authUser", JSON.stringify(authUser));
-      localStorage.setItem("token", token);
+      localStorage.setItem(AUTH_USER, JSON.stringify(authUser));
+      localStorage.setItem(TOKEN, token);
 
-      if (remember?.current) localStorage.setItem("rememberUser", "true");
+      if (remember?.current) localStorage.setItem(REMEMBER_USER, "true");
 
       return;
     }
