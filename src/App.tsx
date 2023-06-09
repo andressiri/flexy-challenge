@@ -8,6 +8,7 @@ import {
   ProtectRoute,
   RedirectIfLogged,
   RegisterPage,
+  Toaster,
 } from "./components/Templates";
 import { Container } from "./styles/styledComponents";
 import {
@@ -33,6 +34,7 @@ function App() {
           <Route path={`/${DASHBOARD_ROUTE}`} element={<DashboardPage />} />
         </Route>
       </Routes>
+      <Toaster />
     </Container>
   );
 }
