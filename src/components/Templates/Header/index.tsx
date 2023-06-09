@@ -1,10 +1,11 @@
+import { FC } from "react";
 import { useLocation, Link } from "react-router-dom";
 import { LogButtons } from "../../Organisms";
 import flexyLogo from "../../../assets/flexy-logo.svg";
 import { Container, StyledImage } from "./styledComponents";
 import { LOGIN_ROUTE, REGISTER_ROUTE } from "../../../config/constants";
 
-const Header = () => {
+const Header: FC = () => {
   const registerPath = `/${REGISTER_ROUTE}`;
   const loginPath = `/${LOGIN_ROUTE}`;
   const { pathname } = useLocation();

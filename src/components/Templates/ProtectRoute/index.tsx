@@ -1,9 +1,10 @@
+import { FC } from "react";
 import { useContext } from "react";
 import { UsersContext } from "../../../contexts";
 import { Navigate, Outlet } from "react-router-dom";
 import { IAuthUser } from "../../../typings/users";
 
-function ProtectRoute() {
+const ProtectRoute: FC = () => {
   const { authUser } = useContext(UsersContext);
 
   if (!(authUser as IAuthUser).id) {
@@ -11,6 +12,6 @@ function ProtectRoute() {
   }
 
   return <Outlet />;
-}
+};
 
 export default ProtectRoute;

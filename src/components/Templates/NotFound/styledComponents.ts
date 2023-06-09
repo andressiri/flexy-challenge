@@ -1,12 +1,12 @@
 import { styled } from "@mui/material/styles";
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 
-export const Container = styled(Box)(({ theme }) => ({
-  paddingTop: theme.custom.header.height,
-}));
-
-export const Title = styled(Typography)(({ theme }) => ({
-  color: theme.palette.primary.main,
-  fontSize: "60px",
-  fontWeight: 800,
+export const Container = styled(Box)(() => ({
+  width: "100%",
+  height: "100%",
+  display: "flex",
+  flexDirection: "column",
+  gap: "30px",
+  alignItems: "center",
+  justifyContent: "center",
 }));
