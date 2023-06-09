@@ -217,9 +217,7 @@ export const ButtonStyled = styled(Button, {
     fontWeight: 700,
     lineHeight: "24px",
     textTransform: "none",
-    background: isDisabled
-      ? theme.custom.buttons.disabledBackground
-      : typeOfButton.background,
+    background: typeOfButton.background,
     borderRadius: theme.custom.radius.medium,
     border: isDisabled
       ? `2px solid ${theme.custom.buttons.disabledBackground}`
