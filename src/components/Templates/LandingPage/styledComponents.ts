@@ -10,4 +10,7 @@ export const Container = styled(Box)(({ theme }) => ({
   gap: theme.custom.header.height,
   alignItems: "center",
   justifyContent: "flex-start",
+  "@media (max-width: 768px)": {
+    paddingTop: theme.custom.header.smallHeight,
+  },
 }));

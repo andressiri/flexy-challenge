@@ -5,4 +5,7 @@ export const Container = styled(Box)(({ theme }) => ({
   width: "100vw",
   height: "100vh",
   paddingTop: theme.custom.header.height,
+  "@media (max-width: 768px)": {
+    paddingTop: theme.custom.header.smallHeight,
+  },
 }));
