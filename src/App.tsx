@@ -1,6 +1,7 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 import {
   DashboardPage,
+  Header,
   LandingPage,
   LoginPage,
   NotFound,
@@ -19,6 +20,7 @@ import {
 function App() {
   return (
     <Container>
+      <Header />
       <Routes>
         <Route path={`/${NOT_FOUND_ROUTE}`} element={<NotFound />} />
         <Route path="*" element={<Navigate to={`/${NOT_FOUND_ROUTE}`} />} />
