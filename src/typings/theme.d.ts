@@ -1,6 +1,10 @@
 import { Theme, ThemeOptions } from "@mui/material/styles"; // eslint-disable-line @typescript-eslint/no-unused-vars
 
 interface custom {
+  colors: {
+    shadesOfPurple98: string;
+    shadesOfPurple92: string;
+  };
   buttons: {
     height: string;
     disabledBackground: string;

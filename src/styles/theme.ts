@@ -19,6 +19,10 @@ export const theme: ThemeOptions = createTheme({
     fontFamily: "'Nunito Sans', sans-serif",
   },
   custom: {
+    colors: {
+      shadesOfPurple98: "rgba(247, 247, 253, 1)",
+      shadesOfPurple92: "rgba(224, 222, 247, 1)",
+    },
     buttons: {
       height: "48px",
       disabledBackground: "rgba(130, 130, 130, 1)",
