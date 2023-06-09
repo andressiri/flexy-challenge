@@ -12,10 +12,12 @@ export const Container = styled(Box, {
   padding: "28px 11px",
   display: "flex",
   alignItems: "center",
-  justifyContent: "space-between",
+  justifyContent: showLogButtons ? "space-between" : "flex-start",
   borderBottom: `1.5px solid ${theme.custom.colors.shadesOfPurple92}`,
-  "@media (min-width: 768px)": {
-    justifyContent: showLogButtons ? "space-between" : "flex-start",
+  "@media (max-width: 768px)": {
+    height: theme.custom.header.smallHeight,
+    padding: "16px 24px",
+    justifyContent: "space-between",
   },
 }));
 
@@ -23,4 +25,9 @@ export const StyledImage = styled("img")(() => ({
   width: "134px",
   height: "40px",
   padding: "8px 15px 2px 15px",
+}));
+
+export const MenuIcon = styled("img")(() => ({
+  width: "24px",
+  height: "24px",
 }));
