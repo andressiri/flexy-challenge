@@ -10,6 +10,8 @@ export const theme: ThemeOptions = createTheme({
     },
     secondary: {
       main: "rgba(71, 190, 163, 1)",
+      light: "rgba(198, 252, 236, 1)",
+      dark: "rgba(0, 136, 111, 1)",
       contrastText: "rgba(0, 9, 41, 1)",
     },
   },
