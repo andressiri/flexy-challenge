@@ -1,7 +1,7 @@
 import { styled } from "@mui/material/styles";
 import { Box, Typography } from "@mui/material";
 
-const formSidesPadding = 30;
+const formSidesPadding = 24;
 
 export const Container = styled(Box)(() => ({
   width: "100%",
@@ -25,7 +25,7 @@ export const FormInnerContainer = styled(Box)(({ theme }) => ({
   maxWidth: `calc(${theme.custom.buttons.maxWidth} + ${
     formSidesPadding * 2
   }px)`,
-  margin: "0px auto 50px 93px",
+  margin: "0px auto 50px 99px",
   padding: `0px ${formSidesPadding}px`,
   "@media (max-width: 1548px)": {
     margin: "0px auto 50px auto",
