@@ -26,6 +26,8 @@ Se adjuntan primero las imágenes más importantes, correspondientes a la pantal
 
 ![Pantalla intermedia](/assets/pantallaIntermedia.png)
 
+![Errores responsive](/assets/erroresResponsive.png)
+
 </details>
 
 ## Instalación en local
@@ -38,6 +40,6 @@ Para instalar esta aplicación y probarla en desarrollo necesitas tener instalad
 4. Instalar las dependencias del directorio raíz con el comando `npm install`.
 5. Correr el comando `npm run dev` que inicializará la aplicación en el puerto 3000.
 
-### Aclaración
+### Aclaraciones
 
-El registro de usuarios está hecho de manera rudimentaria en el estado de la aplicación, ya que es meramente de prueba, por lo que al salir de la página se perderán los usuarios registrados.
+El registro de usuarios está hecho de manera rudimentaria en el estado de la aplicación, ya que es meramente de prueba, por lo que al salir de la página se perderán los usuarios registrados. Además hay una pequeña diferencia en el color del botón al principio, ya que hasta que no se cumplan las condiciones para poder llevar adelante la petición este estará deshabiitado, y resulta importante que sea notorio para una buena experiencia de usuario.
