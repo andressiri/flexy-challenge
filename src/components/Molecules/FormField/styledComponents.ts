@@ -18,13 +18,14 @@ export const EyeIconContainer = styled(Box, {
   "&::after": {
     content: "''",
     position: "absolute",
-    top: "11px",
-    left: "-1px",
+    top: "10.5px",
+    left: "-1.5px",
     width: "28px",
-    height: "3px",
+    height: "2.5px",
+    display: dynamicType === "password" ? "none" : "block",
     background: theme.custom.colors.greyscale500,
+    opacity: "0.9",
     borderRadius: "2px",
     transform: "rotate(-45deg)",
-    display: dynamicType === "password" ? "none" : "block",
   },
 }));

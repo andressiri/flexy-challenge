@@ -46,7 +46,9 @@ const ImageUpload: FC<ImageUploadProps> = ({
         height={47}
         onClick={imageUploaded ? handleCancelUpload : handleUploadImage}
       />
-      <Text>{imageUploaded ? removeText : uploadText}</Text>
+      <Text onClick={imageUploaded ? handleCancelUpload : handleUploadImage}>
+        {imageUploaded ? removeText : uploadText}
+      </Text>
     </Container>
   );
 };

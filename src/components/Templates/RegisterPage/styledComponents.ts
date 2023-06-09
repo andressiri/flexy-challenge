@@ -12,5 +12,6 @@ export const ChildrenText = styled(Typography)(({ theme }) => ({
     color: theme.palette.primary.main,
     margin: "-10px auto 27px auto",
     fontWeight: 500,
+    cursor: "pointer",
   },
 }));

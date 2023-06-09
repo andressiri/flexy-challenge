@@ -20,6 +20,7 @@ export const StyledImage = styled("img")(() => ({
   height: "47px",
   borderRadius: "50%",
   objectFit: "cover",
+  cursor: "pointer",
 }));
 
 export const Text = styled(Typography)(({ theme }) => ({
@@ -27,4 +28,5 @@ export const Text = styled(Typography)(({ theme }) => ({
   fontSize: "16px",
   fontWeight: 600,
   lineHeight: "22.4px",
+  cursor: "pointer",
 }));

@@ -18,7 +18,7 @@ const useMockRequest = () => {
               (user) => (props.data as IRegisterFormData)?.email === user.email
             )
           )
-            throw new Error("Ya existe un usuario con ese correo");
+            throw "Ya existe un usuario con ese correo";
 
           const data = {
             ...props.data,
@@ -41,17 +41,17 @@ const useMockRequest = () => {
         );
 
         if (!(userExists.length > 0))
-          throw new Error("No existe un usuario con ese email");
+          throw "No existe un usuario con ese email";
 
         if (userExists[0].password !== (props.data as ILoginFormData)?.password)
-          throw new Error("Contraseña incorrecta");
+          throw "Contraseña incorrecta";
 
         return {
           message: "Ha ingresado exitosamente",
           data: userExists[0],
         };
       } catch (err) {
-        if (err instanceof Error) {
+        if (err instanceof Error || typeof err === "string") {
           throw new Error(`${err}`);
         } else {
           console.log("Error inesperado", err); // eslint-disable-line no-console
