@@ -1,35 +1,42 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Routes, Route, Navigate } from "react-router-dom";
+import {
+  DashboardPage,
+  Header,
+  LandingPage,
+  LoginPage,
+  NotFound,
+  ProtectRoute,
+  RedirectIfLogged,
+  RegisterPage,
+  Toaster,
+} from "./components/Templates";
+import { Container } from "./styles/styledComponents";
+import {
+  DASHBOARD_ROUTE,
+  LOGIN_ROUTE,
+  NOT_FOUND_ROUTE,
+  REGISTER_ROUTE,
+} from "./config/constants";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <Container>
+      <Header />
+      <Routes>
+        <Route path={`/${NOT_FOUND_ROUTE}`} element={<NotFound />} />
+        <Route path="*" element={<Navigate to={`/${NOT_FOUND_ROUTE}`} />} />
+        <Route element={<RedirectIfLogged />}>
+          <Route path="/" element={<LandingPage />} />
+          <Route path={`/${LOGIN_ROUTE}`} element={<LoginPage />} />
+          <Route path={`/${REGISTER_ROUTE}`} element={<RegisterPage />} />
+        </Route>
+        <Route element={<ProtectRoute />}>
+          <Route path={`/${DASHBOARD_ROUTE}`} element={<DashboardPage />} />
+        </Route>
+      </Routes>
+      <Toaster />
+    </Container>
+  );
 }
 
-export default App
+export default App;
