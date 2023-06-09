@@ -1,3 +1,5 @@
+import { useContext } from "react";
+import { GeneralContext } from "../../../../../contexts";
 import { validateEmail } from "../../../../helpers";
 import {
   IRegisterFormData,
@@ -9,6 +11,9 @@ const useGetRegisterFormFieldsSpecifics = (
   formData: IRegisterFormData,
   formVisited: IRegisterFormVisited
 ) => {
+  const { viewportWidth } = useContext(GeneralContext);
+  const isSmall = viewportWidth < 769;
+
   const emailError =
     formVisited.email && (!formData.email || !validateEmail(formData.email));
 
@@ -28,7 +33,7 @@ const useGetRegisterFormFieldsSpecifics = (
     },
     {
       field: "phone",
-      placeholder: "+54 01 0200 000",
+      placeholder: isSmall ? "+54 9 221 000 0000" : "+54 01 0200 000",
       required: true,
       type: "tel",
       helperText:

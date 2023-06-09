@@ -13,6 +13,7 @@ export const Container = styled(Box, {
   display: "flex",
   alignItems: "center",
   justifyContent: showLogButtons ? "space-between" : "flex-start",
+  background: "white",
   borderBottom: `1.5px solid ${theme.custom.colors.shadesOfPurple92}`,
   "@media (max-width: 768px)": {
     height: theme.custom.header.smallHeight,
@@ -24,7 +25,10 @@ export const Container = styled(Box, {
 export const StyledImage = styled("img")(() => ({
   width: "134px",
   height: "40px",
-  padding: "8px 15px 2px 15px",
+  padding: "5px 16px 5px 14px",
+  "@media (max-width: 768px)": {
+    padding: "5px 21px 5px 9px",
+  },
 }));
 
 export const MenuIcon = styled("img")(() => ({

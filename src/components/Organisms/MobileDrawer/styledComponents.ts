@@ -31,7 +31,7 @@ export const StyledIconButton = styled(IconButton)(({ theme }) => ({
   width: "35px",
   height: "35px",
   marginRight: "-5px",
-  color: theme.palette.primary.contrastText,
+  color: theme.palette.secondary.contrastText,
   "& svg": {
     fontSize: "35px !important",
   },

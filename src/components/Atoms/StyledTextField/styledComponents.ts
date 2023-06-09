@@ -47,7 +47,9 @@ export const TextFieldStyled = styled(TextField, {
         },
         "&::placeholder": {
           color: theme.palette.primary.dark,
-          opacity: "0.5",
+          fontSize: "16px",
+          fontWeight: 500,
+          opacity: "0.65",
         },
       },
     },

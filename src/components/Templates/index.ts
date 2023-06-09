@@ -1,5 +1,6 @@
-export { default as Header } from "./Header";
 export { default as DashboardPage } from "./DashboardPage";
+export { default as ForgotPassword } from "./ForgotPassword";
+export { default as Header } from "./Header";
 export { default as LandingPage } from "./LandingPage";
 export { default as LoginPage } from "./LoginPage";
 export { default as NotFound } from "./NotFound";

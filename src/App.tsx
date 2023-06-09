@@ -1,6 +1,7 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 import {
   DashboardPage,
+  ForgotPassword,
   Header,
   LandingPage,
   LoginPage,
@@ -13,6 +14,7 @@ import {
 import { Container } from "./styles/styledComponents";
 import {
   DASHBOARD_ROUTE,
+  FORGOT_PASSWORD_ROUTE,
   LOGIN_ROUTE,
   NOT_FOUND_ROUTE,
   REGISTER_ROUTE,
@@ -25,6 +27,10 @@ function App() {
       <Routes>
         <Route path={`/${NOT_FOUND_ROUTE}`} element={<NotFound />} />
         <Route path="*" element={<Navigate to={`/${NOT_FOUND_ROUTE}`} />} />
+        <Route
+          path={`/${FORGOT_PASSWORD_ROUTE}`}
+          element={<ForgotPassword />}
+        />
         <Route element={<RedirectIfLogged />}>
           <Route path="/" element={<LandingPage />} />
           <Route path={`/${LOGIN_ROUTE}`} element={<LoginPage />} />
