@@ -3,3 +3,4 @@ export { default as clearSessionStorageImages } from "./clearSessionStorageImage
 export { default as getWindowDimensions } from "./getWindowDimensions";
 export { default as handleNumberOfTabs } from "./handleNumberOfTabs";
 export { default as setUsersContextInitialState } from "./setUsersContextInitialState";
+export { default as validateEmail } from "./validateEmail";
