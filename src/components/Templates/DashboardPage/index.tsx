@@ -1,9 +1,19 @@
-import { Container, Title } from "./styledComponents";
+import { FC } from "react";
+import { Container } from "../LandingPage/styledComponents";
+import { Title } from "../../Atoms";
+import { YoutubeVideo } from "../../Molecules";
 
-const DashboardPage = () => {
+const DashboardPage: FC = () => {
+  const titleText = "¡Empezá a disfrutar de flexy!";
+
   return (
-    <Container component="section">
-      <Title variant="h1">Dashboard Page</Title>
+    <Container component="main">
+      <Title text={titleText} />
+      <YoutubeVideo
+        width="896"
+        height="504"
+        src="https://www.youtube.com/embed/EAIvULgyM-M"
+      />
     </Container>
   );
 };

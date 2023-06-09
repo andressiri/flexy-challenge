@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { FC, useContext } from "react";
 import { UsersContext } from "../../../contexts";
 import { Link } from "react-router-dom";
 import HowToRegIcon from "@mui/icons-material/HowToReg";
@@ -9,7 +9,7 @@ import { StyledList } from "./styledComponents";
 import { IAuthUser } from "../../../typings/users";
 import { LOGIN_ROUTE, REGISTER_ROUTE } from "../../../config/constants";
 
-const LogButtons = () => {
+const LogButtons: FC = () => {
   const { authUser, setAuthUser } = useContext(UsersContext);
   const registerPath = `/${REGISTER_ROUTE}`;
   const loginPath = `/${LOGIN_ROUTE}`;
@@ -27,6 +27,7 @@ const LogButtons = () => {
                 BGType="primaryOutlined"
                 transparent={true}
                 sx={{ width: "160px" }}
+                tabIndex={-1}
               >
                 Register
               </StyledButton>
@@ -35,7 +36,11 @@ const LogButtons = () => {
 
           <li>
             <Link to={loginPath}>
-              <StyledButton endIcon={<LoginIcon />} sx={{ width: "160px" }}>
+              <StyledButton
+                endIcon={<LoginIcon />}
+                sx={{ width: "160px" }}
+                tabIndex={-1}
+              >
                 Login
               </StyledButton>
             </Link>
@@ -49,6 +54,7 @@ const LogButtons = () => {
               BGType="primaryOutlined"
               transparent={true}
               sx={{ width: "160px" }}
+              tabIndex={-1}
             >
               Logout
             </StyledButton>

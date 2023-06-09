@@ -1,9 +1,19 @@
-import { Container, Title } from "./styledComponents";
+import { FC } from "react";
+import { Container } from "./styledComponents";
+import { Title } from "../../Atoms";
+import { YoutubeVideo } from "../../Molecules";
 
-const LandingPage = () => {
+const LandingPage: FC = () => {
+  const titleText = "¡Flexy, la app que cambia todo!";
+
   return (
     <Container component="main">
-      <Title variant="h1">¡Flexy, la app que cambia todo!</Title>
+      <Title text={titleText} />
+      <YoutubeVideo
+        width="896"
+        height="504"
+        src="https://www.youtube.com/embed/ijeEvLBciZM"
+      />
     </Container>
   );
 };
