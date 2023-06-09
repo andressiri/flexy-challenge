@@ -4,6 +4,11 @@ export interface IContextProviderProps {
   children: React.ReactNode;
 }
 
+export interface IGeneralContext {
+  viewportWidth: number;
+  viewportHeight: number;
+}
+
 // Users
 export type AuthUser = IAuthUser | object;
 export type SetAuthUser = React.Dispatch<
