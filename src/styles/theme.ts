@@ -16,14 +16,16 @@ export const theme: ThemeOptions = createTheme({
     },
   },
   typography: {
-    fontFamily: "'Nunito Sans', sans-serif",
+    fontFamily: "'Plus Jakarta Sans', sans-serif",
   },
   custom: {
     colors: {
       shadesOfPurple98: "rgba(247, 247, 253, 1)",
       shadesOfPurple92: "rgba(224, 222, 247, 1)",
+      greyscale500: "rgba(108, 114, 127, 1)",
     },
     buttons: {
+      maxWidth: "352px",
       height: "48px",
       disabledBackground: "rgba(130, 130, 130, 1)",
       disabledColor: "rgba(0, 0, 0, 0.26)",
@@ -33,6 +35,7 @@ export const theme: ThemeOptions = createTheme({
       medium: "8px",
     },
     header: {
+      smallHeight: "72px",
       height: "96px",
     },
   },

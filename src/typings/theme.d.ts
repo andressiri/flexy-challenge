@@ -4,8 +4,10 @@ interface custom {
   colors: {
     shadesOfPurple98: string;
     shadesOfPurple92: string;
+    greyscale500: string;
   };
   buttons: {
+    maxWidth: string;
     height: string;
     disabledBackground: string;
     disabledColor: string;
@@ -15,6 +17,7 @@ interface custom {
     medium: string;
   };
   header: {
+    smallHeight: string;
     height: string;
   };
 }
