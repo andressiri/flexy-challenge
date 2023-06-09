@@ -9,7 +9,11 @@ import { StyledList } from "./styledComponents";
 import { IAuthUser } from "../../../typings/users";
 import { LOGIN_ROUTE, REGISTER_ROUTE } from "../../../config/constants";
 
-const LogButtons: FC = () => {
+interface Props {
+  isDrawer?: boolean;
+}
+
+const LogButtons: FC<Props> = ({ isDrawer }) => {
   const { authUser, setAuthUser } = useContext(UsersContext);
   const registerPath = `/${REGISTER_ROUTE}`;
   const loginPath = `/${LOGIN_ROUTE}`;
@@ -17,7 +21,7 @@ const LogButtons: FC = () => {
   const handleLogout = () => setAuthUser({});
 
   return (
-    <StyledList component="ul">
+    <StyledList component="ul" isDrawer={isDrawer}>
       {!(authUser as IAuthUser).id ? (
         <>
           <li>
