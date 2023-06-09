@@ -21,6 +21,8 @@ const setUsersContextInitialState = (): ReturnObj => {
       authUser,
       setAuthUser: () => authUser,
       remember: React.createRef<boolean | null>(),
+      registeredUsers: [],
+      setRegisteredUsers: () => [],
     },
     userRemembered,
   };

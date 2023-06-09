@@ -5,6 +5,7 @@ import {
   IContextProviderProps,
   IUsersContext,
   AuthUser,
+  RegisteredUsers,
 } from "../../typings/contexts";
 
 export const UsersContext = createContext<IUsersContext>(
@@ -17,6 +18,7 @@ export const UsersContextProvider: FC<IContextProviderProps> = ({
   const { usersContext, userRemembered } = setUsersContextInitialState();
   const [authUser, setAuthUser] = useState<AuthUser>(usersContext.authUser);
   const remember = useRef(userRemembered);
+  const [registeredUsers, setRegisteredUsers] = useState<RegisteredUsers>([]); // used to mockup users in a simple way
 
   useHandleAuthUserEffects(authUser, setAuthUser, remember);
 
@@ -26,6 +28,8 @@ export const UsersContextProvider: FC<IContextProviderProps> = ({
         authUser,
         setAuthUser,
         remember,
+        registeredUsers,
+        setRegisteredUsers,
       }}
     >
       {children}

@@ -12,8 +12,15 @@ export type SetAuthUser = React.Dispatch<
 
 export type Remember = React.MutableRefObject<boolean | null>;
 
+export type RegisteredUsers = IUser[] | [];
+export type SetRegisteredUsers = React.Dispatch<
+  React.SetStateAction<IUser[] | []>
+>;
+
 export interface IUsersContext {
   authUser: AuthUser;
   setAuthUser: SetAuthUser;
   remember: Remember;
+  registeredUsers: RegisteredUsers;
+  setRegisteredUsers: SetRegisteredUsers;
 }
