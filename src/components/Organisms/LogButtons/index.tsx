@@ -33,7 +33,7 @@ const LogButtons: FC<Props> = ({ isDrawer }) => {
                 sx={{ width: "160px" }}
                 tabIndex={-1}
               >
-                Register
+                Registrarse
               </StyledButton>
             </Link>
           </li>
@@ -45,7 +45,7 @@ const LogButtons: FC<Props> = ({ isDrawer }) => {
                 sx={{ width: "160px" }}
                 tabIndex={-1}
               >
-                Login
+                Ingresar
               </StyledButton>
             </Link>
           </li>
@@ -60,7 +60,7 @@ const LogButtons: FC<Props> = ({ isDrawer }) => {
               sx={{ width: "160px" }}
               tabIndex={-1}
             >
-              Logout
+              Salir
             </StyledButton>
           </Link>
         </li>

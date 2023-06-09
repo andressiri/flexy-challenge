@@ -19,6 +19,7 @@ export const StyledImage = styled("img")(() => ({
   width: "47px",
   height: "47px",
   borderRadius: "50%",
+  objectFit: "cover",
 }));
 
 export const Text = styled(Typography)(({ theme }) => ({

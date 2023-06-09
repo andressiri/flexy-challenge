@@ -22,7 +22,7 @@ const RememberMe = () => {
     <StyledFormGroup>
       <RememberLabel
         control={<Checkbox onChange={handleRemember} />}
-        label="Remember me"
+        label="Recordarme"
       />
     </StyledFormGroup>
   );

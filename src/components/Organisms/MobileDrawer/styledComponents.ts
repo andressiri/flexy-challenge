@@ -5,7 +5,7 @@ export const StyledSwipeableDrawer = styled(SwipeableDrawer)(({ theme }) => ({
   color: theme.palette.secondary.contrastText,
   "& .MuiPaper-root": {
     width: "100%",
-    maxWidth: `calc(${theme.custom.buttons.maxWidth} + 40px)`,
+    maxWidth: "320px",
     background: theme.palette.primary.contrastText.replace("1)", "0.3)"),
     color: "inherit",
   },
